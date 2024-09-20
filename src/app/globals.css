@@ -2,26 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+
+  @font-face {
+    font-family: vazir;
+    font-weight: 400;
+    src: url('../../public//fonts/vazir//Vazir.woff2') format("woff");
+  }
+  @font-face {
+    font-family: tanha;
+    font-weight: 400;
+    src: url('../../public/fonts/tanha/Tanha.woff2') format("woff");
+  }
+  @font-face {
+    font-family: logo;
+    font-weight: 400;
+    src: url('../../public/fonts//aquire-font/Aquire-BW0ox.otf') format("woff");
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+

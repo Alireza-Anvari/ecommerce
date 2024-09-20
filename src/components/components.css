@@ -1,0 +1,10 @@
+.clipPath{
+ 
+    transition: .600s ease-in-out;
+}
+.a{
+    clip-path: circle(700px at 80% 20%) ; 
+}
+.b{
+    clip-path: circle(0 at 80% 20%) !important; 
+}
