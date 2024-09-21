@@ -1,9 +1,17 @@
+"use client"
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [rangeval, setRangeval] = useState(null);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-            content
+    <div className="relative">
+  <div>
+      <input type="range" className="custom-range" min="199" max="3999" 
+       onChange={(event) => setRangeval(event.target.value)} />
+      <h4>The range value is {rangeval}</h4>
+    </div>
     </div>
   );
 }

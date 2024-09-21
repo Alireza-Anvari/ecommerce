@@ -16,11 +16,22 @@
     src: url('../../public/fonts/tanha/Tanha.woff2') format("woff");
   }
   @font-face {
-    font-family: logo;
+    font-family: logo1;
     font-weight: 400;
     src: url('../../public/fonts//aquire-font/Aquire-BW0ox.otf') format("woff");
   }
+  @font-face {
+    font-family: logo2;
+    font-weight: 400;
+    src: url('../../public/fonts/lemon/LemonJellyPersonalUse.woff2') format("woff");
+  }
 }
 
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 
+
+}
 

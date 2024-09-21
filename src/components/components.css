@@ -2,9 +2,16 @@
  
     transition: .600s ease-in-out;
 }
-.a{
-    clip-path: circle(700px at 80% 20%) ; 
+.aa{
+/* display: none; */
+height: 0;
+overflow: hidden;
+transition: .600s ease-in-out;
+
 }
-.b{
-    clip-path: circle(0 at 80% 20%) !important; 
+.bb{
+ /* display: flex; */
+ height: auto;
+ flex-direction: column;
+
 }

@@ -11,9 +11,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="relative overflow-hidden">
+      <body className="relative ">
+        <div className="w-full min-h-screen overflow-hidden">
         <Header/>
         {children}
+
+        </div>
       </body>
     </html>
   );

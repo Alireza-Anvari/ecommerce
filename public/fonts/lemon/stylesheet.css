@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Lemon Jelly Personal Use';
+    src: url('LemonJellyPersonalUse.eot');
+    src: url('LemonJellyPersonalUse.eot?#iefix') format('embedded-opentype'),
+        url('LemonJellyPersonalUse.woff2') format('woff2'),
+        url('LemonJellyPersonalUse.woff') format('woff'),
+        url('LemonJellyPersonalUse.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

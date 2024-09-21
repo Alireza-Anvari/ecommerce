@@ -1,12 +1,11 @@
 
+
 "use client"
 
 import React, { useEffect, useRef, useState } from 'react'
 import { TiThMenu } from "react-icons/ti";
 import { FaUser } from "react-icons/fa";
-import { FaSquarePlus } from "react-icons/fa6";
-import { product } from '../../server/data';
-import { productHead } from '../../server/data';
+
 import './components.css'
 const Header = () => {
     const accordionRef = useRef();
@@ -16,27 +15,7 @@ const Header = () => {
     const [clippath,setClippath]=useState(false)
     const [showLoginHint,setshowLoginHint]=useState(false)
     const [rangeval, setRangeval] = useState(null);
-    const [showProductMenu, setshowProductMenu] = useState(false);
-    const [subProduct, setSubProduct] = useState(false);
-    const [indexSubProduct, setIndexSubProduct] = useState(null);
-    const aa=productHead()
-    const data=product
-    console.log("aaaaaaaaaaaa",data);
 
-    
-    const subProductHandler=(id)=>{
-        if(subProduct===false || id===indexSubProduct)
-        {
-
-            setSubProduct(prev=>!prev)
-        }
-
-        setIndexSubProduct(id)
-    }
-const showProductMenuhandler=()=>{
-    setshowProductMenu(prev=>!prev)
-    setSubProduct(flase)
-}
 
     const showMenuMobileHandler=(e)=>{
         // e.stopPropagation()
@@ -44,9 +23,6 @@ const showProductMenuhandler=()=>{
         setMenu(prev=>!prev)
         setClippath(prev=>!prev)
         setshowLoginHint(false)
-        setSubProduct(flase)
-        setshowProductMenu(false)
-
   
     }
 const showLoginHintHandler=()=>{
@@ -63,12 +39,10 @@ const showLoginHintHandler=()=>{
          ) {
              
           
-            setshowProductMenu(false)
+        
             setMenu(false)
             setClippath(false)
             setshowLoginHint(false)
-            setSubProduct(flase)
-
 
           }
         };
@@ -118,42 +92,6 @@ const showLoginHintHandler=()=>{
       <input type="range"  min="199" max="3999" 
        onChange={(event) => setRangeval(event.target.value)} />
       <h4>The range value is {rangeval}</h4>
-    </div>
-               <div>
-  
-      <h4>home</h4>
-    </div>
-    <div >
-    <div className='' >
-        <span className='' onClick={showProductMenuhandler}>producet</span>
-        <div    className={`transition-all overflow-hidden duration-500 bg-green-100 px-2 ${
-          showProductMenu ? 'max-h-screen' : 'max-h-0'
-        //   showProductMenu ? 'h-auto' : 'h-0'
-        }`}>
-            
-            <div className='flex flex-col'>
-                {aa.map((a,index)=>(
-                    <div key={index}>
-                        <span onClick={()=>{subProductHandler(index)}}>{index}{a}</span>
-                        <div    className={`transition-all overflow-hidden duration-500 bg-green-100 px-2 ${
-          subProduct ? 'max-h-screen' : 'max-h-0'
-        //   showProductMenu ? 'h-auto' : 'h-0'
-        }`}>{index===indexSubProduct ? (
-            <div className='flex flex-col'>
-              {/* {console.log("dataaaaaaaaaaaaa",  data[a] )} */}
-              {data[a].map((b,i)=>(<span key={i}>{b.type}</span>))}
-              
-            </div>
-        ):null}</div>    
-                    </div>
-                ))}
-
-            </div>
-          
-        </div>
-    </div>
-    <div>nnnnnn</div>
-
     </div>
                 </div>
             </div>
