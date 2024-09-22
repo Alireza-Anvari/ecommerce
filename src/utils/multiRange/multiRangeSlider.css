@@ -118,3 +118,10 @@
 .rangrSlider:hover  .slider__left-value {
   color: white !important;
 }
+
+.container > input{
+  width:95% !important
+}
+.slider {
+  width: 95% !important;
+}

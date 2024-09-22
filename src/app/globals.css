@@ -27,6 +27,14 @@
   }
 }
 
+
+.flexyRow{
+  @apply flex justify-center items-center
+}
+
+.flexyCol{
+  @apply flex justify-center items-center flex-col
+}
 body{
   padding: 0;
   margin: 0;

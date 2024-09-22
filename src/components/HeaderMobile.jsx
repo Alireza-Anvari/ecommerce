@@ -3,7 +3,7 @@
 import MultiRangeSlider from "../utils/multiRange/MultiRangeSlider";
 
 import React, { useEffect, useRef, useState } from 'react'
-import { TiThMenu } from "react-icons/ti";
+import { TiThMenu,TiTimes  } from "react-icons/ti";
 import { FaUser } from "react-icons/fa";
 import { FiPlusSquare ,FiMinusSquare  } from "react-icons/fi";
 import { product } from '../../server/data';
@@ -113,6 +113,10 @@ const showLoginHintHandler=()=>{
         {/* <span className='font-[logo]'>Majd</span> */}
         </div>
 
+
+
+
+
         <div className='relative w-[48%]  h-full align-content:center flex items-center justify-end  rounded px-1' ref={userIconRef}>
             {/* <FaUser   onClick={(e)=>{showLoginHintHandler(e)}} className='bg-whiteColor w-7 h-7 p-1 rounded-full hover:scale-110 duration-100 cursor-pointer'/> */}
             <div className={`   w-full flex justify-center items-center  h-14 	duration-200   rounded overflow-hidden z-50`}>
@@ -146,7 +150,18 @@ const showLoginHintHandler=()=>{
 
 
 
-        <div className='w-[12%]  h-full align-content:center flex items-center justify-center' ref={menuIconRef}><TiThMenu   onClick={(e)=>{showMenuMobileHandler(e)}} className='bg-whiteColor w-10 h-10 p-2 rounded-full hover:scale-110 duration-100 cursor-pointer'/></div>
+
+
+
+
+{/* icon menu///////////////////////////////////////////////////////////// */}
+        <div className='w-[12%]  h-full align-content:center flex items-center justify-center' ref={menuIconRef}> 
+            {!menu ? (
+                <TiThMenu   onClick={(e)=>{showMenuMobileHandler(e)}} className='bg-whiteColor w-10 h-10 p-2 rounded-full hover:scale-110 duration-100 cursor-pointer'/>
+
+            ):(                <TiTimes   onClick={(e)=>{showMenuMobileHandler(e)}} className='bg-whiteColor w-10 h-10 p-2 rounded-full hover:scale-110 duration-100 cursor-pointer '/>
+        )}
+            </div>
         </div>
 
 
@@ -159,6 +174,11 @@ const showLoginHintHandler=()=>{
 
 
 
+
+
+
+
+{/* accordion/////////////////////////////////// */}
 
         <div    ref={accordionRef} className={`${!menu ? "translate-x-0 " : "-translate-x-full mt-[2px]  " } md:hidden flex flex-col h-screen top-16  left-full absolute  z-40  w-[50%] transition-transform duration-700 ease-in-out	bg-transparent   overflow-hidden `}>
             
