@@ -7,7 +7,7 @@ const Header = () => {
     
   return (
     <>
-    <div className="md:hidden">
+    <div className="md:hidden font-[vazir]">
 
     <HeaderMobile />
     </div>

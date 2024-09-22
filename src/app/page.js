@@ -8,9 +8,15 @@ export default function Home() {
   return (
     <div className="relative">
   <div>
-      <input type="range" className="custom-range" min="199" max="3999" 
-       onChange={(event) => setRangeval(event.target.value)} />
-      <h4>The range value is {rangeval}</h4>
+ 
+      <h4 className="h-96 w-96 bg-green-600">The range value is {rangeval}</h4>
+      <h4 className="h-96 w-96 bg-green-600">The range value is {rangeval}</h4>
+      <h4 className="h-96 w-96 bg-green-600">The range value is {rangeval}</h4>
+      <h4 className="h-96 w-96 bg-green-600">The range value is {rangeval}</h4>
+      <h4 className="h-96 w-96 bg-green-600">The range value is {rangeval}</h4>
+      <h4 className="h-96 w-96 bg-green-600">The range value is {rangeval}</h4>
+      <h4 className="h-96 w-96 bg-green-600">The range value is {rangeval}</h4>
+      <h4 className="h-96 w-96 bg-green-600">The range value is {rangeval}</h4>
     </div>
     </div>
   );

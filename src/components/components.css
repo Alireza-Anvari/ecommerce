@@ -1,17 +1,53 @@
+:root {
+    --darkColor: #1c1f1f;
+    --whiteColor:#f3f3f3;
+    --primaryColor:#03c5ff;
+  }
 .clipPath{
  
-    transition: .600s ease-in-out;
+    /* transition: .700s ease-in-out; */
+    cursor: pointer;
 }
-.aa{
-/* display: none; */
-height: 0;
-overflow: hidden;
-transition: .600s ease-in-out;
+.clipPath>div:hover{
+    background: var(--darkColor);
+    color: var(--whiteColor);
+    transition: .100s ease-in-out;
+}
+.iconUser li:hover{
+    background:  var(--darkColor);
+    color:var(--whiteColor);
+    transform: scale(1.2);
+    transition: .100s;
+    cursor: pointer;
+}
+.colorSelect > div > button{
+color :var(--darkColor) !important;
+font-weight: bold;
 
 }
-.bb{
- /* display: flex; */
- height: auto;
- flex-direction: column;
+.sortBox:hover .colorSelect > div > button{
+color :var(--whiteColor) !important;
+font-weight: bold;
+
+}
+.colorSelect > div > button > div{
+color :var(--darkColor) !important ;
+font-weight: bold;
+
+}
+.sortBox:hover .colorSelect div > button > div{
+color :var(--whiteColor) !important ;
+font-weight: bold;
+
+}
+.colorSelect > div >   label{
+color :var(--darkColor) !important ;
+font-weight: bold;
+
+}
+.sortBox:hover .colorSelect> div >   label{
+color :var(--whiteColor) !important ;
+font-weight: bold;
+
 
 }
